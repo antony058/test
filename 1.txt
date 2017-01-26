@@ -1,0 +1,21 @@
+<script>
+    function sendQuery() {
+        $(document).ready(function () {
+        $
+            var a = $('#a').val();
+            $.ajax({
+                url:"MyServlet",
+                type:"POST",
+                dataType:"text",
+                data:("str=" + a),
+                success: function (data) {
+                    alert("SENDED");
+                    alert(data);
+                },
+                error: function (e) {
+                    alert("NOT SENDED");
+                }
+            })
+
+        })
+    }
